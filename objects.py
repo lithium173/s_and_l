@@ -23,12 +23,11 @@ class Table:
 
 
 class Bit:
-    def __init__(self, screen, index, image, bit_x, bit_y):
+    def __init__(self, screen, index, image, bit_pos):
         self.screen = screen
         self.index = index
         self.image = image
-        self.bit_x = bit_x
-        self.bit_y = bit_y
+        self.bit_pos = (self.bit_x, self.bit_y)
 
 
 class Dice:
