@@ -16,6 +16,8 @@ class Dice:
 		self.screen=screen
 		self.p=playars
 		self.turn=0
+		self.x=480#xpos in main frame.should be reformed!
+		self.y=480#ypos in main frame.should be reformed!
 		self.ran=random.randint(1,6)
 		self.r1=pygame.image.load('red0.png')
 		self.r2=pygame.image.load('red1.png')
@@ -32,6 +34,20 @@ class Dice:
 		self.d5=pygame.image.load('5.png')
 		self.d6=pygame.image.load('6.png')
 		self.sound=pygame.mixer.music.load('dice_s.wav')
-	def randDice(self):
+	def Reload(self):
 		pass
+	def randDice(self):
+		d=self.ran()
+		if d==1:
+			screen.blit(self.d1(self.x, self.y))
+		if d==2:
+			screen.blit(self.d2(self.x, self.y))
+		if d==3:
+			screen.blit(self.d3(self.x, self.y))
+		if d==4:
+			screen.blit(self.d4(self.x, self.y))
+		if d==5:
+			screen.blit(self.d5(self.x, self.y))
+		if d==6:
+			screen.blit(self.d6(self.x, self.y))
 
