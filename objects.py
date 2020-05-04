@@ -35,7 +35,11 @@ class Dice:
 		self.d6=pygame.image.load('6.png')
 		self.sound=pygame.mixer.music.load('dice_s.wav')
 	def Reload(self):
-		pass
+		for event in pygame.event.get():
+			if event.type == pygame.MOUSE:
+				pygame.mixer.music.play(0)
+				randDice()
+		#loading picture
 	def randDice(self):
 		d=self.ran()
 		if d==1:
