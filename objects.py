@@ -31,7 +31,7 @@ class Dice:
 		self.d4=pygame.image.load('4.png')
 		self.d5=pygame.image.load('5.png')
 		self.d6=pygame.image.load('6.png')
-		self.sound=pygame.mixer.load('dice_s.wav')
+		self.sound=pygame.mixer.music.load('dice_s.wav')
 	def randDice(self):
 		pass
 
